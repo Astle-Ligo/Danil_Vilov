@@ -1,0 +1,62 @@
+<section>
+    <section>
+        <div id="home" class="home">
+            <div class="homeText">
+                <h1>New Arrivals</h1>
+                <br>
+                <h4>For Men & Women</h4>
+                <p>
+                    Unleashing the Art of Style
+                    <br>
+                    Welcome to Danil Vilov
+                </p>
+                <button type="button" class="btn btn-dark btn-lg button">Shop Now</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="upcoming page" id="upcoming">
+            <h1>Up<span>coming</span></h1>
+            <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        {{#each images}}
+                        <li class="splide__slide">
+                            <img alt="Image" src="/carousel-images/{{this._id}}.jpg">
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section>
+        <div class="newdrops page" id="newdrops">
+            <h1>New<span> Drops</span></h1>
+            <br>
+            <div class="new-container">
+                {{#each products}}
+                <div class="box">
+                    <div class="box-image">
+                        <div class="discount">
+                            <p>-{{this.discount}}% off</p>
+                        </div>
+                        <img src="/product-images/{{this._id}}.jpg" alt="" srcset="">
+                        </img>
+                    </div>
+                    <div class="box-title">
+                        <h5>{{this.Name}}</h5>
+                        <p>Rs. {{this.sellingPrice}}.00/- <span class="actualPrice">{{this.actualPrice}}.00</span></p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var splide = new Splide('.splide').mount();
+    });
+</script>

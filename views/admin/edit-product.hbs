@@ -1,0 +1,82 @@
+<section>
+    <div class="container-fluid pt-5">
+        <div class="edit-product m-4">
+            <div class="add-product mt-3">
+                <h2 class="text-center">Edit Product</h2>
+                <form action="/admin/edit-product/{{product._id}}" method="post" enctype="multipart/form-data">
+                    <label for="">Name</label>
+                    <input type="text" name="Name" id="" class="form-control" value="{{product.Name}}">
+
+                    <label for="">Selling Price</label>
+                    <input type="text" name="sellingPrice" class="form-control" id="sellingPrice"
+                        onchange="discountRate()" value="{{product.sellingPrice}}">
+
+                    <label for="">Actual Price</label>
+                    <input type="text" name="actualPrice" class="form-control" id="actualPrice"
+                        onchange="discountRate()" value="{{product.actualPrice}}">
+
+                    <input type="hidden" name="discount" class="form-control" id="discount" value="{{product.discount}}">
+
+                    <br>
+                    <div class="status-box">
+                        <label for="">Status</label>
+                        <select class="custom-select" id="itemStatus">
+                            <option value="1">In Stock</option>
+                            <option value="2" selected>New</option>
+                            <option value="3">Out of Stock</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <input type="hidden" name="status" class="form-control" id="status">
+
+                    <input type="hidden" name="new" class="form-control" id="new">
+                    <input type="hidden" name="outOfStock" class="form-control" id="outOfStock">
+
+                    <br>
+                    <label for="">Image</label>
+                    <br>
+                    <img src="/product-images/{{product._id}}.jpg" alt=""
+                        style="height: 5rem; width:auto; margin-block:1rem">
+                    <input type="file" name="Image" class="form-control">
+
+                    <button class="btn btn-success mt-4" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function discountRate() {
+        let discount = document.getElementById('discount').value = Math.round(((document.getElementById('actualPrice').value - document.getElementById('sellingPrice').value) * 100) / document.getElementById('actualPrice').value)
+        console.log(discount)
+    }
+
+    const show = () => {
+        const sel = document.getElementById("itemStatus"); // or this if only called onchange
+        let value = sel.options[sel.selectedIndex].value; // or just sel.value
+        let text = sel.options[sel.selectedIndex].text;
+        document.getElementById('status').value = text;
+
+        if (value == 2) {
+            document.getElementById('new').value = text;
+            document.getElementById('outOfStock').value = "";
+        }
+        else if (value == 3) {
+
+            document.getElementById('outOfStock').value = text;
+            document.getElementById('new').value = "";
+        }
+        else {
+            document.getElementById('new').value = "";
+            document.getElementById('outOfStock').value = "";
+        }
+    }
+
+    window.addEventListener("load", () => { // on load 
+        document.getElementById("itemStatus").addEventListener("change", show); // show on change
+        show(); // show onload
+    });
+
+</script>

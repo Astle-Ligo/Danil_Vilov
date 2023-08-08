@@ -1,0 +1,34 @@
+<section>
+    <div class="view-product container pt-5">
+        <table class="table table-striped table-dark mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Selling Price</th>
+                    <th scope="col">Actual Price</th>
+                    <th scope="col">Discount%</th>
+                    <th scope="col">Image</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                <tr>
+                    <th scope="row">{{@index}}</th>
+                    <td>{{this.Name}}</td>
+                    <td>{{this.sellingPrice}}</td>
+                    <td>{{this.actualPrice}}</td>
+                    <td>{{this.discount}}%</td>
+                    <td><img src="/product-images/{{this._id}}.jpg" alt="" style="height: 50px;" id="product-image"></td>
+                    <td>{{this.status}}</td>
+                    <td>
+                        <a href="/admin/delete-new-drops-product/{{this._id}}" class="btn btn-danger" onclick="return confirm('Do you want to delete {{this.Name}}? ')">Delete</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>

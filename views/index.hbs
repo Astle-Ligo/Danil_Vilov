@@ -1,0 +1,109 @@
+<section>
+    
+    <section>
+        <div id="home" class="home">
+            <div class="homeText">
+                <h1>New Arrivals</h1>
+                <br>
+                <h4>For Men & Women</h4>
+                <p>
+                    Unleashing the Art of Style
+                    <br>
+                    Welcome to Danil Vilov
+                </p>
+                <button type="button" class="btn btn-dark btn-lg button">Shop Now</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="upcoming page" id="upcoming">
+            <h1>Up<span>coming</span></h1>
+            <br>
+
+        </div>
+    </section>
+    <section>
+        <div class="newdrops page" id="newdrops">
+            <h1>New<span> Drops</span></h1>
+            <br>
+            <br>
+            <div class="new-container">
+                {{#each products}}
+                <div class="box">
+                    <div class="box-image">
+                        <div class="discount">
+                            <p>{{this.discount}}</p>
+                        </div>
+                    </div>
+                    <div class="box-title">
+                        <h5>{{this.name}}</h5>
+                        <p>Rs. {{this.price}}.00/- <span>999.00</span></p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="about-us page" id="about-us">
+                <h1>About <span>Us</span></h1>
+                <br>
+                <div class="about-us-content">
+                    <div class="col-lg-5 col-sm-10 about-us-text">
+                        <h2>Why Choose Us?</h2>
+                        <br>
+                        <p>
+                            When you choose Danil Vilov, you become a part of our vibrant community united by a
+                            shared
+                            passion for
+                            self-expression and responsible fashion. We invite you to break free from conformity,
+                            embrace
+                            your unique
+                            identity, and join us as we revolutionize the way we dress. Together, let's unleash the
+                            art
+                            of
+                            style and
+                            create a more conscious, vibrant, and inclusive world.
+                            <br>
+                            However, Danil Vilov not only believes in enhancing your personal style but also in
+                            uplifting
+                            the planet we
+                            call home. We recognize the importance of sustainable practices and are committed to
+                            minimizing
+                            our
+                            environmental footprint. By carefully sourcing ethically-produced materials, adopting
+                            eco-friendly
+                            manufacturing processes, and promoting fair trade, we aim to make a positive impact on
+                            both
+                            the
+                            fashion
+                            industry and the world at large.
+                            <br>
+                            Discover the power of self-expression. Experience the magic of Danil Vilov.
+                        </p>
+                    </div>
+                    <div class="col-lg-5 about-us-image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="contact-us page" id="contact-us">
+            <h1> Contact <span>us</span></h1>
+            <br>
+            <div>
+                <form action="" class="form">
+                    <input class="inputbox" type="text" name="name" id="contact-name" placeholder="Full Name">
+                    <input class="inputbox" type="email" name="email" id="contact-email" placeholder="Email">
+                    <textarea class="inputbox" name="message" id="contact-message" cols="30" rows="10"
+                        placeholder="Message"></textarea>
+                    <button type="submit" class="inputbox send" id="send">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+</section>
