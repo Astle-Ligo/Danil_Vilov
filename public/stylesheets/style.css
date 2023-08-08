@@ -24,7 +24,7 @@ body {
 /* Navbar */
 
 .navbar {
-  height: 4rem;
+  height: 5rem;
 }
 
 #navbar {
@@ -50,14 +50,14 @@ body {
 .navbar-collapse {
   justify-content: right;
   width: fit-content;
+}
+
+nav ul {
   background: rgba(255, 255, 255, 0.6);
 }
 
-nav ul{
-  background: rgba(255, 255, 255, 0.6);
-}
-
-nav ul>li , nav ul>div{
+nav ul>li,
+nav ul>div {
   display: flex;
   align-items: center;
   justify-content: right;
@@ -89,7 +89,7 @@ nav li {
   margin-right: 2rem;
 }
 
-.three-lines{
+.three-lines {
   font-size: 2rem;
 }
 
@@ -182,7 +182,6 @@ nav li {
 .splide {
   width: 100%;
   height: 90%;
-  aspect-ratio: 9/16;
 }
 
 .splide__track {
@@ -190,11 +189,17 @@ nav li {
   width: 100%;
 }
 
+.splide__slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .splide__slide img {
-  width: 100%;
   height: 100%;
-  background: center no-repeat cover ;
+  aspect-ratio: 16/9;
   padding-block: 2rem;
+  border: transparent solid 2rem;
 }
 
 /* Upcoming */
@@ -635,7 +640,8 @@ nav li {
   justify-content: center;
   flex-direction: column;
 }
-.table-buttons{
+
+.table-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -643,11 +649,12 @@ nav li {
   gap: 1rem;
 }
 
-.buttons{
+.buttons {
   width: 5rem;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   width: fit-content;
 }
+
 /* Admin */
