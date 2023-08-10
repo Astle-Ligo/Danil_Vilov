@@ -57,7 +57,13 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var splide = new Splide('.splide');
+        let width = screen.width
+        console.log(width)
+        var splide = new Splide('.splide', {
+            type: 'loop'
+        });
         splide.mount();
+
+
     });
 </script>
