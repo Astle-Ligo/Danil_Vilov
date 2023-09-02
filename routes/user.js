@@ -44,4 +44,10 @@ router.post('/product/:id', async (req, res) => {
   console.log(req.body);
 })
 
+router.get(':id', async (req, res) => {
+  let product = await productHelpers.getProductDetails(req.params.id)
+  console.log(product);
+  res.render('user/product-page', { product, admin: false })
+})
+
 module.exports = router;

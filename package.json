@@ -22,5 +22,11 @@
     "mongodb": "^5.7.0",
     "morgan": "~1.9.1",
     "nodemon": "^3.0.1"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

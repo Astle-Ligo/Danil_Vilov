@@ -12,7 +12,9 @@
                     <th scope="col">Actual Price</th>
                     <th scope="col">Discount%</th>
                     <th scope="col">Image</th>
-                    <th>Status</th>
+                    <th scope="col">Discription</th>                    
+                    <th scope="col">Link</th>
+                    <th scope="col">Status</th>
                     <th></th>
                 </tr>
             </thead>
@@ -24,7 +26,9 @@
                     <td>{{this.sellingPrice}}</td>
                     <td>{{this.actualPrice}}</td>
                     <td>{{this.discount}}%</td>
-                    <td><img src="/product-images/{{this._id}}.jpg" alt="" style="height: 50px;" id="product-image"></td>
+                    <td><img src="/product-images/{{this._id}}.jpg" alt="" style="height: 70px;" id="product-image"></td>
+                    <td><textarea name="" id="" cols="15" rows="3">{{this.discription}}</textarea></td>
+                    <td><a href="{{this.link}}" class="btn btn-info">Link</a></td>
                     <td>{{this.status}}</td>
                     <td class="table-buttons">
                         <a href="/admin/edit-product/{{this._id}}" class="btn btn-primary buttons">Edit</a>

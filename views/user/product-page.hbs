@@ -6,20 +6,21 @@
                 <img src="/product-images/{{product._id}}.jpg" alt="" style="height: 25rem;">
             </div>
             <div class="product-description">
-                <h4><span class="sellingPrice">₹{{product.sellingPrice}}.00/-&nbsp;&nbsp;</span>
-                    <br>
-                    MRP <span class="actualPrice">₹{{product.actualPrice}}.00</span>
-                    <span class="productPageDiscount">({{product.discount}}% off)</span>
-                </h4>
+                <div class="product-description-content">
+                    <h4><span class="sellingPrice">₹{{product.sellingPrice}}.00/-&nbsp;&nbsp;</span>
+                        <br>
+                        MRP <span class="actualPrice">₹{{product.actualPrice}}.00</span>
+                        <span class="productPageDiscount">({{product.discount}}% off)</span>
+                    </h4>
 
-                <h3>
-                    Product Details
-                </h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim omnis voluptas, sed ad mollitia nisi
-                    blanditiis vel maxime magnam adipisci tenetur sunt neque cum ullam nemo, praesentium impedit.
-                    Dolore, voluptas.
-                </p>
+                    <h3>
+                        Product Details
+                    </h3>
+                    <p>
+                        {{product.discription}}
+                    </p>
+                    <a href="{{product.link}}" class="btn btn-success product-buy" target="_blank">Buy Now</a>
+                </div>
             </div>
         </div>
     </div>

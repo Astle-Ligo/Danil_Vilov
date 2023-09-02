@@ -36,20 +36,38 @@
             <br>
             <div class="new-container">
                 {{#each products}}
-                <div class="box">
-                    <div class="box-image">
-                        <div class="discount">
-                            <p>-{{this.discount}}% off</p>
+                <a href="/product/{{this._id}}" style="text-decoration: none;">
+                    <div class="box">
+                        <div class="box-image">
+                            <div class="discount">
+                                <p>-{{this.discount}}% off</p>
+                            </div>
+                            <img src="/product-images/{{this._id}}.jpg" alt="" srcset="">
+                            </img>
                         </div>
-                        <img src="/product-images/{{this._id}}.jpg" alt="" srcset="">
-                        </img>
+                        <div class="box-title">
+                            <h5>{{this.Name}}</h5>
+                            <p>Rs. {{this.sellingPrice}}.00/- <span class="actualPrice">{{this.actualPrice}}.00</span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="box-title">
-                        <h5>{{this.Name}}</h5>
-                        <p>Rs. {{this.sellingPrice}}.00/- <span class="actualPrice">{{this.actualPrice}}.00</span></p>
-                    </div>
-                </div>
+                </a>
                 {{/each}}
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="contact-us page" id="contact-us">
+            <h1> Contact <span>us</span></h1>
+            <br>
+            <div class="contact-form">
+                <form action="" class="form">
+                    <input class="inputbox" type="text" name="name" id="contact-name" placeholder="Full Name">
+                    <input class="inputbox" type="email" name="email" id="contact-email" placeholder="Email">
+                    <textarea class="inputbox" name="message" id="contact-message" cols="30" rows="10"
+                        placeholder="Message"></textarea>
+                    <button type="submit" class="inputbox send" id="send">Send</button>
+                </form>
             </div>
         </div>
     </section>
